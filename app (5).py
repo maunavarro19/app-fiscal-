@@ -8,7 +8,7 @@ st.title("Primera aplicación ")
 
 st.dataframe(data)
 
-munis (1) = data['entidad'].unique().tolist()
+munis (1).csv = data['entidad'].unique().tolist()
 mun = st.selectbox('seleccione un municipio: ',
              munis)
              
@@ -44,6 +44,7 @@ fig = px.treemap(fin, path=[px.Constant('Total'),
                             'clasificacion_ofpuj'],
                             values='total_recaudo')
 st.plotly_chart(fig)
+
 
 
 
