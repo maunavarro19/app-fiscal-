@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
-data = pd.read_csv('munis.csv')
+data = pd.read_csv('muinis.csv')
 
 st.title("Primera aplicación ")
 
@@ -44,3 +44,4 @@ fig = px.treemap(fin, path=[px.Constant('Total'),
                             'clasificacion_ofpuj'],
                             values='total_recaudo')
 st.plotly_chart(fig)
+
