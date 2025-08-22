@@ -29,7 +29,10 @@ det = ( filtro
 fig, ax = plt.subplots(1, 1, figsize=(10, 6))
 ax.pie(det.values, labels=det.index)
 st.pyplot(fig)
-
+fig = px.pie(name=gen.index,
+             values=gen.values,
+             title = 'Grafica corregida',
+             color_discre_sequence = ['#13262F','#73683B','#E9E6FF']
 fin = (filtro
        .groupby(['clas_gen', 'clasificacion_ofpuj'])['total_recaudo'] 
        .sum()
@@ -40,6 +43,7 @@ fig = px.treemap(fin, path=[px.Constant('Total'),
                             'clasificacion_ofpuj'],
                             values='total_recaudo')
 st.plotly_chart(fig)
+
 
 
 
