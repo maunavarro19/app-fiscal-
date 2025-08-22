@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
-data = pd.read_csv('muinis (1).csv')
+data = pd.read_csv('munis (1).csv')
 
 st.title("Primera aplicación ")
 
 st.dataframe(data)
 
-muinis (1) = data['entidad'].unique().tolist()
+munis (1) = data['entidad'].unique().tolist()
 mun = st.selectbox('seleccione un municipio: ',
              munis)
              
@@ -44,6 +44,7 @@ fig = px.treemap(fin, path=[px.Constant('Total'),
                             'clasificacion_ofpuj'],
                             values='total_recaudo')
 st.plotly_chart(fig)
+
 
 
 
